@@ -57,17 +57,17 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+-----------+----------+----------+-----------+------|                               |------+----------+-----------+----------+----------+--------|
  * |  TAB   |    gui/A  |   alt/S  |   sft/D  |   ctrl/F  |   G  |                               |   H  |   ctrl/J |   shft/K  |   alt/L  | gui/;  : |  ' "   |
  * |--------+-----------+----------+----------+-----------+------+-------------.  ,--------------+------+----------+-----------+----------+----------+--------|
- * | CTRL   |   Z       |   X      |   C      |        V  |   B  |LSHfT | FKEY |  | MEDIA|       |   N  |   M      | ,       < | . >      | /  ?     | RShift |
+ * | CTRL   |   Z       |   X      |   C      |        V  |   B  |SYM   | FKEY |  | MEDIA|       |   N  |   M      | ,       < | . >      | /  ?     | RShift |
  * `-------------------------------+----------+-----------+------+------+------|  |------| Space |------+----------+-----------+------------------------------'
- *                                 |Encoder   | LGUI      | [  { | SYM  |RIGHT |  |LEFT/ |       | }  ] | RGUI     |    NUMPAD |
+ *                                 |Encoder   | LGUI      | [  { | LSFT |RIGHT |  |LEFT/ |       | }  ] | RGUI     |    NUMPAD |
  *                                 | Toggle   |           |      |      |      |  |ENTER |       |      |          |           |
  *                                 `-------------------------------------------'  `--------------------------------------------'
  */
     [_QWERTY] = LAYOUT(
      KC_ESC  , KC_Q  ,  KC_W  ,  KC_E  ,   KC_R  ,   KC_T ,                                           KC_Y,   KC_U  ,  KC_I   , KC_O   , KC_P    , KC_BSPC,
      KC_TAB , GUI_A ,  ALT_S ,  SFT_D ,   CTL_F ,   KC_G ,                                            KC_H,   CTL_J ,  SFT_K  , ALT_L  , GUI_SCLN, KC_QUOTE,
-     KC_LCTL, KC_Z  ,  KC_X  ,  KC_C  ,   KC_V  ,   KC_B , KC_LSFT, FKEYS,         MEDIA, KC_TRNS ,   KC_N,   KC_M  ,  KC_COMM, KC_DOT , KC_SLSH , KC_RSFT,
-                                 RENC2, KC_LGUI , KC_LBRC, SYM  ,  RIGHT,         LEFT , KC_SPC  ,KC_RBRC,  KC_RGUI,  NUMPAD
+     KC_LCTL, KC_Z  ,  KC_X  ,  KC_C  ,   KC_V  ,   KC_B , SYM     , FKEYS,         MEDIA, KC_TRNS ,   KC_N,   KC_M  ,  KC_COMM, KC_DOT , KC_SLSH , KC_RSFT,
+                                 RENC2, KC_LGUI , KC_LBRC, KC_LSFT,  RIGHT,         LEFT , KC_SPC  ,KC_RBRC,  KC_RGUI,  NUMPAD
     ),
 
 /*
@@ -110,6 +110,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        KC_GRV, KC_INS, KC_PSCR, KC_DLR, KC_LPRN, KC_RPRN, _______, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
      ),
+
 /* Layer template
  *
  * ,-------------------------------------------.                              ,-------------------------------------------.
@@ -129,6 +130,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
        _______, _______, _______, _______, _______, _______, _______, _______, _______, _______, KC_LPRN, KC_RPRN, KC_DLR, KC_PSCR, KC_INS, KC_GRV,
                                   _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
      ),
+
 /*
  * Sym Layer: Numbers and symbols
  *
