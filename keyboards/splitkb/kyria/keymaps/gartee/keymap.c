@@ -236,62 +236,6 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 //     ),
 };
 
-// Rotary Functionality
-
-#ifdef ENCODER_ENABLE
-bool encoder_update_user(uint8_t index, bool clockwise) {
-    switch(get_highest_layer(layer_state)) {
-        // Per character scrubbing
-        case _QWERTY2:
-            if(clockwise) {
-                tap_code(KC_RGHT);
-            } else {
-                tap_code(KC_LEFT);
-            }
-            break;
-        // Page up and down
-        case _ARROWLEFT:
-            if (clockwise) {
-                tap_code(KC_PGDN);
-            } else {
-                tap_code(KC_PGUP);
-            }
-            break; 
-         // Page up and down
-        case _ARROWRIGHT:
-            if (clockwise) {
-                tap_code(KC_PGDN);
-            } else {
-                tap_code(KC_PGUP);
-            }
-            break; 
-        // Volume
-        case _MEDIA:
-            if (clockwise) {
-                tap_code(KC_VOLU);
-            } else {
-                tap_code(KC_VOLD);
-            }
-            break;      
-        // CTRL_PGUP_PGDWN (Excel Workbook)
-        case _NUMPAD:
-            if (clockwise) {
-                tap_code16(C(KC_PGDN));
-            } else {
-                tap_code16(C(KC_PGUP));
-            }
-        // Per word scrubbing
-        default:
-            if (clockwise) {
-                tap_code16(C(KC_RGHT));
-            } else {
-                tap_code16(C(KC_LEFT));
-            }
-            break;
-    } return false;
-}
-#endif
-
 // OLED Functionality
 
 #ifdef OLED_ENABLE
@@ -426,5 +370,61 @@ bool oled_task_user(void) {
         oled_write_raw_P(kyria_logo, sizeof(kyria_logo));
     }
     return false;
+}
+#endif
+
+// Rotary Functionality
+
+#ifdef ENCODER_ENABLE
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    switch(get_highest_layer(layer_state)) {
+        // Per character scrubbing
+        case _QWERTY2:
+            if(clockwise) {
+                tap_code(KC_RGHT);
+            } else {
+                tap_code(KC_LEFT);
+            }
+            break;
+        // Page up and down
+        case _ARROWLEFT:
+            if (clockwise) {
+                tap_code(KC_PGDN);
+            } else {
+                tap_code(KC_PGUP);
+            }
+            break; 
+         // Page up and down
+        case _ARROWRIGHT:
+            if (clockwise) {
+                tap_code(KC_PGDN);
+            } else {
+                tap_code(KC_PGUP);
+            }
+            break; 
+        // Volume
+        case _MEDIA:
+            if (clockwise) {
+                tap_code(KC_VOLU);
+            } else {
+                tap_code(KC_VOLD);
+            }
+            break;      
+        // CTRL_PGUP_PGDWN (Excel Workbook)
+        case _NUMPAD:
+            if (clockwise) {
+                tap_code16(C(KC_PGDN));
+            } else {
+                tap_code16(C(KC_PGUP));
+            }
+        // Per word scrubbing
+        default:
+            if (clockwise) {
+                tap_code16(C(KC_RGHT));
+            } else {
+                tap_code16(C(KC_LEFT));
+            }
+            break;
+    } return false;
 }
 #endif
