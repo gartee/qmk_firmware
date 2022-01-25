@@ -245,7 +245,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         // Per character scrubbing
         case _QWERTY2:
             if(clockwise) {
-                tap_code(KC__RGHT);
+                tap_code(KC_RGHT);
             } else {
                 tap_code(KC_LEFT);
             }
