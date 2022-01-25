@@ -191,7 +191,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_MEDIA] = LAYOUT(
       KC_LALT, _______, _______, _______, _______, _______,                                     KC_VOLU, _______, _______, KC_UP,   _______,  KC_RALT,
       KC_LSFT, _______, _______, _______, _______, _______,                                     KC_VOLD, _______, KC_LEFT, KC_DOWN, KC_RGHT, KC_RSFT,
-      KC_LCTL, KC_LGUI, _______, _______, _______, _______, _______, _______, _______, _______, KCMUTE , KC_MPRV, KC_MPLY, KC_MNXT, KC_RGUI, KC_RCTL,
+      KC_LCTL, KC_LGUI, _______, _______, _______, _______, _______, _______, _______, _______, KC_MUTE , KC_MPRV, KC_MPLY, KC_MNXT, KC_RGUI, KC_RCTL,
                                  _______, _______, _______, _______, _______, _______, _______, _______, _______, _______
     ),
 
@@ -211,7 +211,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_NUMPAD] = LAYOUT(
       KC_PSLS, KC_PAST, KC_P7, KC_P8 , KC_P9, KC_PMNS,                                    _______, _______, _______, KC_UP,  _______, _______,
       KC_TAB, _______, KC_P4, KC_P5 , KC_P6, KC_PPLS,                                    _______, _______, KC_LEFT, KC_DOWN, KC_RGHT, _______,
-      KC_LSHFT, _______, KC_P1, KC_P2, KC_P3, KC_PENT,KC_BSPC, _______, _______, _______, _______, _______, _______, _______, _______, _______,
+      KC_LSFT, _______, KC_P1, KC_P2, KC_P3, KC_PENT,KC_BSPC, _______, _______, _______, _______, _______, _______, _______, _______, _______,
                                  KC_P0, KC_PDOT, KC_PENT,_______, _______, _______, _______, _______, _______, _______
     ),
 
@@ -245,7 +245,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         // Per character scrubbing
         case _QWERTY2:
             if(clockwise) {
-                tap_code(KC__RIGHT);
+                tap_code(KC__RGHT);
             } else {
                 tap_code(KC_LEFT);
             }
@@ -277,16 +277,16 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
         // CTRL_PGUP_PGDWN (Excel Workbook)
         case _NUMPAD:
             if (clockwise) {
-                tap_code16(C(KC_PGDN);
+                tap_code16(C(KC_PGDN));
             } else {
-                tap_code16(C(KC_PGUP);
+                tap_code16(C(KC_PGUP));
             }
         // Per word scrubbing
         default:
             if (clockwise) {
-                tap_code16(C(KC_RGHT);
+                tap_code16(C(KC_RGHT));
             } else {
-                tap_code16(C(KC_LEFT);
+                tap_code16(C(KC_LEFT));
             }
             break;
     } return false;
