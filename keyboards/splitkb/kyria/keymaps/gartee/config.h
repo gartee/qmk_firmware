@@ -33,6 +33,9 @@
 // Define Handedness.
 #define MASTER_RIGHT
 
+//Tapping Toggle Setting (Default is 5)
+#define TAPPING_TOGGLE 3
+
 // Enable Rotary Encoder.
 #define ENCODER_DIRECTION_FLIP
 

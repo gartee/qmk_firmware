@@ -26,9 +26,6 @@ enum layers {
     _NUMPAD,
 };
 
-//Tapping Toggle Setting (Default is 5)
-#define TAPPING_TOGGLE 3
-
 // Aliases for readability
 #define RENC2    TG(_QWERTY2)
 #define LEFT     LT(_ARROWLEFT, KC_ENT)
