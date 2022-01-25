@@ -31,7 +31,7 @@
 #endif
 
 // Define Handedness.
-#define MASTER_RIGHT
+#define MASTER_LEFT
 
 //Tapping Toggle Setting (Default is 5)
 #define TAPPING_TOGGLE 3
