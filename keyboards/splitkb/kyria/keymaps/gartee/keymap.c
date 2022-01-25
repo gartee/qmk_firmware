@@ -15,17 +15,6 @@
  */
 #include QMK_KEYBOARD_H
 
-enum layers {
-    _QWERTY = 0,
-    _QWERTY2,
-    _ARROWLEFT,
-    _ARROWRIGHT,
-    _SYM,
-    _FUNCTION,
-    _MEDIA,
-    _NUMPAD,
-};
-
 // Aliases for readability
 #define RENC2    TG(_QWERTY2)
 #define LEFT     LT(_ARROWLEFT, KC_ENT)
@@ -46,6 +35,17 @@ enum layers {
 #define SFT_K RSFT_T(KC_K)
 #define ALT_L LALT_T(KC_L)
 #define GUI_SCLN RGUI_T(KC_SCLN)
+
+enum layers {
+    _QWERTY = 0,
+    _QWERTY2,
+    _ARROWLEFT,
+    _ARROWRIGHT,
+    _SYM,
+    _FUNCTION,
+    _MEDIA,
+    _NUMPAD,
+};
 
 // clang-format off
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
