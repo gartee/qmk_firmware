@@ -34,7 +34,7 @@
 // #define MASTER_RIGHT
 
 //Tapping Toggle Setting (Default is 5)
-#define TAPPING_TOGGLE 3
+#define TAPPING_TOGGLE 2
 
 // Enable Rotary Encoder.
 #define ENCODER_DIRECTION_FLIP
