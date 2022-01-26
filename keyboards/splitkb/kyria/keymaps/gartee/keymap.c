@@ -18,10 +18,10 @@
 // Aliases for readability
 #define RENC2    TG(_QWERTY2)
 #define LEFT     LT(_ARROWLEFT, KC_ENT)
-#define RIGHT    MO(_ARROWRIGHT)
+#define RIGHT    LT(_ARROWRIGHT, KC_ENT)
 #define SYM      TG(_SYM)
 #define FKEYS    MO(_FUNCTION)
-#define MEDIA    TT(_MEDIA)
+#define MEDIA    MO(_MEDIA)
 #define NUMPAD   TG(_NUMPAD)
 
 // Left-hand home row mods
@@ -70,8 +70,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
  * |--------+-----------+----------+----------+-----------+------+-------------.  ,--------------+------+----------+-----------+----------+----------+--------|
  * | CTRL   |   Z       |   X      |   C      |        V  |   B  |SYM   | FKEY |  | MEDIA|       |   N  |   M      | ,       < | . >      | /  ?     | RShift |
  * `-------------------------------+----------+-----------+------+------+------|  |------| Space |------+----------+-----------+------------------------------'
- *                                 |Encoder   | LGUI      | LSFT |Space |RIGHT |  |LEFT/ |       | RSFT | RGUI     |    NUMPAD |
- *                                 | Toggle   |           |      |      |      |  |ENTER |       |      |          |           |
+ *                                 |Encoder   | LGUI      | LSFT |Space |RIGHT/|  |LEFT/ |       | RSFT | RGUI     |    NUMPAD |
+ *                                 | Toggle   |           |      |      |ENTER |  |ENTER |       |      |          |           |
  *                                 `-------------------------------------------'  `--------------------------------------------'
  */
     [_QWERTY] = LAYOUT(
