@@ -31,7 +31,7 @@
 #endif
 
 // Define Handedness.
-#define MASTER_RIGHT
+// #define MASTER_RIGHT
 
 //Tapping Toggle Setting (Default is 5)
 #define TAPPING_TOGGLE 3
@@ -43,9 +43,10 @@
 #define IGNORE_MOD_TAP_INTERRUPT
 
 // If you are using an Elite C rev3 on the slave side, uncomment the lines below:
-#define SPLIT_USB_DETECT
-#define NO_USB_STARTUP_CHECK
-#define SPLIT_USB_TIMEOUT 1000
+// #define SPLIT_USB_DETECT
+// #define NO_USB_STARTUP_CHECK
+// addition to the standard two definitions below
+// #define SPLIT_USB_TIMEOUT 1000
 
 // Configure the global tapping term (default: 200ms)
 #define TAPPING_TERM 200
@@ -57,9 +58,9 @@
 #define TAPPING_FORCE_HOLD
 
 // Disables certain features.
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
-#define NO_ACTION_ONESHOT
+// #define NO_ACTION_MACRO
+// #define NO_ACTION_FUNCTION
+// #define NO_ACTION_ONESHOT
 
-#define SPLIT_OLED_ENABLE
-#define SPLIT_WPM_ENABLE
+// #define SPLIT_OLED_ENABLE
+// #define SPLIT_WPM_ENABLE
